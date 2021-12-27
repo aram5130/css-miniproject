@@ -10,6 +10,7 @@
 <body>
   <header>
     <a href="#" class="logo">Food <span>.</span></a>
+    <div class="menuToggle" onclick="toggleMenu()"></div>
     <ul class="navigation">
       <li><a href="#banner">Home</a></li>
       <li><a href="#About">About</a></li>
@@ -32,7 +33,7 @@
     </div>
   </section>
 
-  <section class="about" id="about">
+  <section class="about" id="About">
     <div class="row">
       <div class="col50">
         <h2 class="titleText"><span>A</span>bout Us</h2>
@@ -62,7 +63,7 @@
   </section>
 
 
-  <section class="menu" id="menu">
+  <section class="menu" id="Menu">
     <div class="title">
       <h2 class="titleText">Our <span>M</span>enu</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -121,7 +122,7 @@
       </div>
     </div>
   </section>
-<section class="expert" id="expert">
+<section class="expert" id="Expert">
   <div class="title">
     <h2 class="titleText">Our kitchen<span>E</span>xpert</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -162,7 +163,7 @@
   </div>
 </section>
 
-<section class="testimonials" id="testimonials">
+<section class="testimonials" id="Testimonials">
   <div class="title white">
     <h2 class="titleText">They <span>S</span>aid About Us</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -211,20 +212,44 @@
     </div>
   </div>
 </section>
-<section class="contact" id="contact">
-  <div class="title white">
+<section class="contact" id="Contact">
+  <div class="title">
     <h2 class="titleText"><span>C</span>ontact Us</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
   <div class="contactFrom">
     <h3>Send Message</h3>
+    <div class="inputBox">
+      <input type="text" palcaholder="Name">
+    </div>
+    <div class="inputBox">
+      <input type="text" palcaholder="Email">
+    </div>
+    <div class="inputBox">
+      <textarea placeholder="Name"></textarea>
+    </div>
+    <div class="inputBox">
+      <input type="submit" value="Send">
+    </div>
   </div>
 </section>
+
+<div class="copyrightText">
+  <p>Copyright 2021 <a href="#">online Tutorials</a>. All Right Reserved</p>
+</div>
+
   <script>
     window.addEventListener('scroll', function () {
       const header = document.querySelector('header');
       header.classList.toggle("sticky", window.scrollY > 0);
     });
+
+    function toggleMenu() {
+      const menuToggle = document.querySelector('.menuToggle');
+      const navigation = document.querySelector('.navigation');
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+    };
   </script>
 </body>
 </html>
